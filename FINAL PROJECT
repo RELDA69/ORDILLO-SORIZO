@@ -1,0 +1,363 @@
+using System;
+
+namespace PROJECT_102_SORIZO_ORDILLO
+{
+	class Program
+	{
+		static int playerBalance = 5000;
+		
+		public static void Main(string[] args)
+		{		
+						
+			Console.WriteLine("			");
+			Console.WriteLine("░██╗░░░░░░░██╗███████╗██╗░░░░░░█████╗░░█████╗░███╗░░░███╗███████╗");
+			Console.WriteLine("░██║░░██╗░░██║██╔════╝██║░░░░░██╔══██╗██╔══██╗████╗░████║██╔════╝");
+			Console.WriteLine("░╚██╗████╗██╔╝█████╗░░██║░░░░░██║░░╚═╝██║░░██║██╔████╔██║█████╗░░");
+			Console.WriteLine("░░████╔═████║░██╔══╝░░██║░░░░░██║░░██╗██║░░██║██║╚██╔╝██║██╔══╝░░");
+			Console.WriteLine("░░╚██╔╝░╚██╔╝░███████╗███████╗╚█████╔╝╚█████╔╝██║░╚═╝░██║███████╗");
+			Console.WriteLine("░░░╚═╝░░░╚═╝░░╚══════╝╚══════╝░╚════╝░░╚════╝░╚═╝░░░░░╚═╝╚══════╝");
+			Console.WriteLine("");
+            Console.WriteLine("Choose a game to play:");
+            Console.WriteLine("1. Slot Machine");
+            Console.WriteLine("2. Coin Flip");
+            Console.WriteLine("3. Dice Roll");
+            Console.WriteLine("4. Quit");
+          
+            
+            int choice;
+            while(true)
+            {
+            	if (int.TryParse(Console.ReadLine(), out choice))
+            	{
+            		switch(choice)
+            		{
+            			case 1:
+            			PlaySlotMachine();           	
+            			Console.Clear();
+                        Console.WriteLine("			");
+						Console.WriteLine("░██╗░░░░░░░██╗███████╗██╗░░░░░░█████╗░░█████╗░███╗░░░███╗███████╗");
+						Console.WriteLine("░██║░░██╗░░██║██╔════╝██║░░░░░██╔══██╗██╔══██╗████╗░████║██╔════╝");
+						Console.WriteLine("░╚██╗████╗██╔╝█████╗░░██║░░░░░██║░░╚═╝██║░░██║██╔████╔██║█████╗░░");
+						Console.WriteLine("░░████╔═████║░██╔══╝░░██║░░░░░██║░░██╗██║░░██║██║╚██╔╝██║██╔══╝░░");
+						Console.WriteLine("░░╚██╔╝░╚██╔╝░███████╗███████╗╚█████╔╝╚█████╔╝██║░╚═╝░██║███████╗");
+						Console.WriteLine("░░░╚═╝░░░╚═╝░░╚══════╝╚══════╝░╚════╝░░╚════╝░╚═╝░░░░░╚═╝╚══════╝");
+						Console.WriteLine("");
+            			Console.WriteLine("Choose a game to play:");
+            			Console.WriteLine("1. Slot Machine");
+            			Console.WriteLine("2. Coin Flip");
+            			Console.WriteLine("3. Dice Roll");
+            			Console.WriteLine("4. Quit");
+            			
+                        break;
+                        
+                        case 2:
+                        PlayCoinFlip();
+                        Console.Clear();
+                        Console.WriteLine("			");
+						Console.WriteLine("░██╗░░░░░░░██╗███████╗██╗░░░░░░█████╗░░█████╗░███╗░░░███╗███████╗");
+						Console.WriteLine("░██║░░██╗░░██║██╔════╝██║░░░░░██╔══██╗██╔══██╗████╗░████║██╔════╝");
+						Console.WriteLine("░╚██╗████╗██╔╝█████╗░░██║░░░░░██║░░╚═╝██║░░██║██╔████╔██║█████╗░░");
+						Console.WriteLine("░░████╔═████║░██╔══╝░░██║░░░░░██║░░██╗██║░░██║██║╚██╔╝██║██╔══╝░░");
+						Console.WriteLine("░░╚██╔╝░╚██╔╝░███████╗███████╗╚█████╔╝╚█████╔╝██║░╚═╝░██║███████╗");
+						Console.WriteLine("░░░╚═╝░░░╚═╝░░╚══════╝╚══════╝░╚════╝░░╚════╝░╚═╝░░░░░╚═╝╚══════╝");
+						Console.WriteLine("");
+            			Console.WriteLine("Choose a game to play:");
+            			Console.WriteLine("1. Slot Machine");
+            			Console.WriteLine("2. Coin Flip");
+            			Console.WriteLine("3. Dice Roll");
+            			Console.WriteLine("4. Quit");
+                        break;
+                        
+                        case 3:
+                        PlayDiceRoll();
+                        Console.Clear();
+                        Console.WriteLine("			");
+						Console.WriteLine("░██╗░░░░░░░██╗███████╗██╗░░░░░░█████╗░░█████╗░███╗░░░███╗███████╗");
+						Console.WriteLine("░██║░░██╗░░██║██╔════╝██║░░░░░██╔══██╗██╔══██╗████╗░████║██╔════╝");
+						Console.WriteLine("░╚██╗████╗██╔╝█████╗░░██║░░░░░██║░░╚═╝██║░░██║██╔████╔██║█████╗░░");
+						Console.WriteLine("░░████╔═████║░██╔══╝░░██║░░░░░██║░░██╗██║░░██║██║╚██╔╝██║██╔══╝░░");
+						Console.WriteLine("░░╚██╔╝░╚██╔╝░███████╗███████╗╚█████╔╝╚█████╔╝██║░╚═╝░██║███████╗");
+						Console.WriteLine("░░░╚═╝░░░╚═╝░░╚══════╝╚══════╝░╚════╝░░╚════╝░╚═╝░░░░░╚═╝╚══════╝");
+						Console.WriteLine("");
+            			Console.WriteLine("Choose a game to play:");
+            			Console.WriteLine("1. Slot Machine");
+            			Console.WriteLine("2. Coin Flip");
+            			Console.WriteLine("3. Dice Roll");
+            			Console.WriteLine("4. Quit");
+                        break;
+                                                                                              
+                        
+                        case 4:
+                        Console.WriteLine("Thanks for playing! Goodbye!");
+                        return;
+                        
+                        default:
+                        Console.WriteLine("Invalid choice. Please enter a number between 1 and 4. Thank You!");
+                        break;	
+            		}
+            	}
+            	else
+            	{
+            		Console.WriteLine("Invalid Input. Please Enter a Number:");
+            	}
+            }
+		}//mainmethod
+		
+		
+		
+		//START of SLOTMACHINE.
+		static void PlaySlotMachine()
+		{
+			Console.Clear();
+			Console.WriteLine("Welcome to the Slot Machine!");
+			System.Threading.Thread.Sleep(100);
+			Console.WriteLine("");
+				
+			Console.WriteLine("Your current balance: $" + playerBalance);
+            Console.WriteLine("Press Enter to spin the reels...");
+            Console.ReadLine();
+
+            while (true)
+            {
+               Spin();
+               Console.WriteLine("");
+               Console.WriteLine("Your final balance: $" + playerBalance);
+               Console.WriteLine("Press Enter to spin again or type 'exit' to quit.");
+               string input = Console.ReadLine().ToLower();
+
+               if (input == "exit")
+               break;
+            }
+
+            Console.WriteLine("Thanks for playing! Goodbye!");
+            Console.Clear();      
+            return;
+        }
+				
+
+		static void Spin()
+		{
+    		Console.Clear();
+    		Console.WriteLine("Spinning...");
+    		System.Threading.Thread.Sleep(1000);
+
+    		char[] symbols = { '7', 'A', 'B', 'C', 'X', 'Y', 'Z' };
+        	Random random = new Random();
+
+        	char[] reels = { symbols[random.Next(0, 7)], symbols[random.Next(0, 7)], symbols[random.Next(0, 7)] };
+
+        	DisplayReels(reels);
+
+        	if (reels[0] == reels[1] || reels[1] == reels[2] || reels[0] == reels[2])
+        	{
+            	Console.WriteLine("Congratulations! You won!");
+            	playerBalance += 200;
+       		}
+        	else
+        	{
+            	Console.WriteLine("Sorry, you didn't win this time. Try again!");
+            	playerBalance -= 100;
+        	}
+        	Console.WriteLine("");
+        	Console.WriteLine("Your updated balance: $" + playerBalance);
+    	}
+
+    static void DisplayReels(char[] reels)
+    {
+        Console.WriteLine("  ___   ___   ___  ");
+        Console.WriteLine(" | " + reels[0] + " | | " + reels[1] + " | | " + reels[2] + " | ");
+        Console.WriteLine(" |___| |___| |___| ");
+    }
+	//END OF SLOTMACHINE.
+	
+	
+	
+	
+	
+	//START OF COINFLIP.
+	static void PlayCoinFlip()
+	{
+		Console.Clear();
+		while (true)
+        {
+			Console.WriteLine("Your current balance: $" + playerBalance);
+            Console.WriteLine("HEADS win $200, TAILS lose $100");
+			Console.WriteLine("Press Enter to flip the coin (or 'Q' to quit):");
+            if (Console.ReadLine().Trim().Equals("Q", StringComparison.OrdinalIgnoreCase))
+            {
+                Console.WriteLine("Goodbye!");
+                Console.Clear();
+                break;
+            }
+
+            FlipCoin();
+        }
+    }
+        
+	
+	
+	static void FlipCoin()
+	{
+		Console.Clear();
+		Console.WriteLine("Flipping Coin...");
+	    System.Threading.Thread.Sleep(1000);
+		Random random = new Random();
+        string result = (random.Next(0, 2) == 0) ? "Heads" : "Tails";
+        Console.Clear();
+        
+        Console.WriteLine("Coin Flipped!: " + result);
+        
+        if(result == "Tails")
+        {        	
+        	Console.WriteLine("       ████████████        ");
+        	Console.WriteLine("    ███          ████     ");
+        	Console.WriteLine("  ███               ████  ");
+        	Console.WriteLine("  ██    ██████████    ███ ");
+        	Console.WriteLine("████        ██        ████");
+        	Console.WriteLine("██          ██          ██");
+        	Console.WriteLine("██          ██          ██");
+        	Console.WriteLine("██          ██          ██");
+        	Console.WriteLine("██          ██          ██");
+        	Console.WriteLine("████        ██         ██ ");
+        	Console.WriteLine("  ██        ██        ██  ");
+        	Console.WriteLine("  ████               ██   ");
+        	Console.WriteLine("    ██████      ██████    ");
+        	Console.WriteLine("         █████████        ");
+
+        	Console.WriteLine("Sorry, you lost this time. You lose $100.");
+        	playerBalance -= 100;
+        	Console.WriteLine("Your final balance: $" + playerBalance);        	
+        }
+        else 
+        {        	
+        	Console.WriteLine("       ████████████        ");
+        	Console.WriteLine("    ███          ████     ");
+        	Console.WriteLine("  ███               ████  ");
+        	Console.WriteLine("  ██    ██      ██    ███ ");
+        	Console.WriteLine("████    ██      ██    ████");
+        	Console.WriteLine("██      ██      ██      ██");
+        	Console.WriteLine("██      ██      ██      ██");
+        	Console.WriteLine("██      ██████████      ██");
+        	Console.WriteLine("██      ██      ██      ██");
+        	Console.WriteLine("████    ██      ██     ██ ");
+        	Console.WriteLine("  ██    ██      ██    ██  ");
+        	Console.WriteLine("  ████               ██   ");
+        	Console.WriteLine("    ██████      ██████    ");
+        	Console.WriteLine("         █████████        ");   
+        	
+        	Console.WriteLine("Congratulations! You Won $200");
+        	playerBalance += 200;
+        	Console.WriteLine("Your final balance: $" + playerBalance);       	
+        }
+            Console.WriteLine("");
+	}//END OF COINFLIP
+	
+	
+	
+	//START OF DICEROLL
+	static void PlayDiceRoll()
+	{
+		Console.Clear();
+		Console.WriteLine("Welcome to the Dice Rolling Game!");
+		Console.WriteLine("Your current balance: $" + playerBalance);
+
+        while (true)
+        {
+        	Console.WriteLine();        	
+        	Console.WriteLine("Odd numbers makes you lose $100 | Even numbers makes you win $200");
+            Console.WriteLine("Press Enter to roll the dice (or type 'exit' to quit)");
+            string input = Console.ReadLine().ToLower();
+
+            if (input == "exit")
+            {
+                break;
+            }
+
+            Console.Clear();
+            Console.WriteLine("Rolling the dice...");
+            System.Threading.Thread.Sleep(1000);
+
+            // Simulate dice animation
+            Random random = new Random();
+            int diceNumber = random.Next(1, 7);
+
+            for (int i = 0; i < 10; i++)
+            {            	
+                RollDiceAnimation(diceNumber);
+                System.Threading.Thread.Sleep(10); 
+            }
+            
+            if (diceNumber == 2 || diceNumber == 4 || diceNumber == 6)
+       			{
+            		Console.WriteLine("Congratulations! You won!");
+            		playerBalance += 200; 
+            		Console.WriteLine("Your final balance: $" + playerBalance);  
+        		}
+        	else
+        		{
+            		Console.WriteLine("Sorry, you lost this time. Try again!");
+            		playerBalance -= 100; 
+            		Console.WriteLine("Your final balance: $" + playerBalance);  
+        		}
+            Console.WriteLine("");
+            Console.WriteLine("You rolled a " + diceNumber + "!");           
+        	Console.WriteLine("Your updated balance: $" + playerBalance);
+       	}
+
+        Console.WriteLine("Thanks for playing!");
+    }
+    
+	static void RollDice()
+	{
+		Random random = new Random();
+        random.Next(1, 7);
+        return;
+	}
+	
+	
+	static void RollDiceAnimation(int diceNumber)
+    {
+        Console.Clear();
+
+        Console.WriteLine("+-----+");
+        Console.WriteLine("|     |");
+
+        // Display dice face based on the random number
+        switch (diceNumber)
+        {
+            case 1:
+                Console.WriteLine("|  *  |");
+                break;
+            case 2:
+                Console.WriteLine("| *   |");
+                Console.WriteLine("|   * |");
+                break;
+            case 3:
+                Console.WriteLine("| *   |");
+                Console.WriteLine("|  *  |");
+                Console.WriteLine("|   * |");
+                break;
+            case 4:
+                Console.WriteLine("| * * |");
+                Console.WriteLine("|     |");
+                Console.WriteLine("| * * |");
+                break;
+            case 5:
+                Console.WriteLine("| * * |");
+                Console.WriteLine("|  *  |");
+                Console.WriteLine("| * * |");
+                break;
+            case 6:
+                Console.WriteLine("| * * |");
+                Console.WriteLine("| * * |");
+                Console.WriteLine("| * * |");
+                break;
+        }
+
+        Console.WriteLine("|     |");
+        Console.WriteLine("+-----+");
+    }
+	
+		
+	}//class
+}//namespace
