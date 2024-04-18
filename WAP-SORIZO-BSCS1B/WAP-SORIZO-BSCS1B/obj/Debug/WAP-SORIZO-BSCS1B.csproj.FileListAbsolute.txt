@@ -1,0 +1,8 @@
+C:\Users\g\Documents\SharpDevelop Projects\WAP-SORIZO-BSCS1B\WAP-SORIZO-BSCS1B\obj\Debug\WAP-SORIZO-BSCS1B.csprojResolveAssemblyReference.cache
+C:\Users\g\Documents\SharpDevelop Projects\WAP-SORIZO-BSCS1B\WAP-SORIZO-BSCS1B\obj\Debug\WAP_SORIZO_BSCS1B.MainForm.resources
+C:\Users\g\Documents\SharpDevelop Projects\WAP-SORIZO-BSCS1B\WAP-SORIZO-BSCS1B\obj\Debug\WAP-SORIZO-BSCS1B.csproj.GenerateResource.Cache
+C:\Users\g\Documents\SharpDevelop Projects\WAP-SORIZO-BSCS1B\WAP-SORIZO-BSCS1B\bin\Debug\WAP-SORIZO-BSCS1B.exe
+C:\Users\g\Documents\SharpDevelop Projects\WAP-SORIZO-BSCS1B\WAP-SORIZO-BSCS1B\bin\Debug\WAP-SORIZO-BSCS1B.pdb
+C:\Users\g\Documents\SharpDevelop Projects\WAP-SORIZO-BSCS1B\WAP-SORIZO-BSCS1B\obj\Debug\WAP-SORIZO-BSCS1B.exe
+C:\Users\g\Documents\SharpDevelop Projects\WAP-SORIZO-BSCS1B\WAP-SORIZO-BSCS1B\obj\Debug\WAP-SORIZO-BSCS1B.pdb
+C:\Users\g\Documents\SharpDevelop Projects\WAP-SORIZO-BSCS1B\WAP-SORIZO-BSCS1B\obj\Debug\WAP_SORIZO_BSCS1B.frmLogin.resources
